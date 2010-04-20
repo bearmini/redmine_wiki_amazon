@@ -3,27 +3,34 @@
 == How to Install  インストール方法
 
 1. Copy files into redmine/vendor/plugins directory
+   
    ファイルを redmine/vendor/plugins ディレクトリにコピーします。
 
    $ cp -R redmine_wiki_amazon/ $(REDMINE_HOME)/vendor/plugins/
 
 2. Restart Redmine
+   
    Redmine を再起動します。
 
 
 Note: Currently you don't have to do 'rake db:migrate_plugins' because this plugin does not use DB.
+
 いまのところ、rake db:migrate_plugins を行う必要はないはずです。（DB を使用していないため）
 
 
 == How to use  使用方法
 
-1. Wherever at you can use Wiki notation, you can write macro like below: 
+1. Wherever you can use Wiki notation, you can write macro like below: 
+
    {{amazon(1234567890)}}
+
    The number in the argument is ASIN.
    You can find the number in the URL of the product page.
 
    Wiki 記法が使える場所にて、
+
    {{amazon(1234567890)}}
+
    というマクロを書きます。
    引数に指定している数字は ASIN という番号です。
    よくわからない場合は、Amazon の商品ページを開いて、URL に現れる10桁くらいの数字をコピーして使用します。
