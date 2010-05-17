@@ -1,0 +1,25 @@
+= wiki_amazon
+
+== インストール方法
+
+1. 以下のコマンドを実行します。
+   
+     $ cd $(REDMINE_HOME)
+     $ ruby script/plugin install git://github.com/bearmini/redmine_wiki_amazon.git
+
+2. Redmine を再起動します。
+
+
+いまのところ、rake db:migrate_plugins を行う必要はないはずです。（DB を使用していないため）
+
+
+== 使用方法
+
+1. Wiki 記法が使える場所にて、
+
+     {{amazon(1234567890)}}
+
+   というマクロを書きます。
+   引数に指定している数字は ASIN という番号です。
+   よくわからない場合は、Amazon の商品ページを開いて、URL に現れる10桁くらいの数字をコピーして使用します。
+
